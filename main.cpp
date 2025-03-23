@@ -51,7 +51,7 @@ int register_class(HINSTANCE hi, const char* name)
 	wc.hInstance = hi;
 	wc.style = CS_HREDRAW | CS_VREDRAW;
 	wc.hCursor = ::LoadCursor(0, IDC_ARROW);
-	wc.hbrBackground = static_cast<HBRUSH>(::CreateSolidBrush(RGB(0, 255, 255)));
+	wc.hbrBackground = ::CreateSolidBrush(RGB(0, 255, 255));
 	return ::RegisterClass(&wc);
 }
 
